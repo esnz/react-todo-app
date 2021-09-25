@@ -1,0 +1,91 @@
+.todoItem {
+  display: flex;
+  border-radius: 4px;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 1rem;
+  border-left: 3px solid;
+  position: relative;
+
+  &.todo {
+    background-color: #eff4fb;
+    border-color: #9ec1e4;
+  }
+  &.inProgress {
+    background-color: #fbefef;
+    border-color: #e49e9e;
+  }
+  &.completed {
+    background-color: #effbf4;
+    border-color: #9ee4a4;
+  }
+
+  p {
+    flex: 1;
+  }
+}
+
+@keyframes anim {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.actions {
+  display: flex;
+  margin-right: -4px;
+}
+
+.menuButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 1.5rem;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 1.5rem;
+  margin-right: -0.5rem;
+  position: relative;
+
+  svg {
+    fill: #3e3e3e;
+    transition: fill 0.2s;
+    width: 1em;
+  }
+
+  &:hover svg {
+    fill: #626262;
+  }
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  position: relative;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  padding: 1rem 0.5rem;
+  color: #fff;
+  margin-right: -4px;
+
+  &:hover {
+    background-color: #00000013;
+  }
+
+  svg {
+    fill: #274062;
+    transition: fill 0.2s;
+    width: 1rem;
+  }
+}

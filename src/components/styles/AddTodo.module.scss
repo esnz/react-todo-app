@@ -1,0 +1,87 @@
+.addTodo {
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 1024px) {
+  }
+}
+
+.addTodoForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  h4 {
+    margin-bottom: 2rem;
+    color: #5e6a74;
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+}
+
+.textInput,
+select {
+  height: 2.5rem;
+  background: #ffffff;
+  border: 1px solid #96b7d9;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #333;
+  padding: 0 1rem;
+  margin-right: 0.5rem;
+  width: 26rem;
+  margin-bottom: 1rem;
+  width: 100%;
+
+  &:focus {
+    outline-color: #96b7d9;
+  }
+}
+
+.button {
+  font-size: 1rem;
+  height: 2.5rem;
+  color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+  padding: 0 1.5rem;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.12s ease-in-out;
+  margin-right: 0.6rem;
+
+  &.fullWidth {
+    width: 100%;
+  }
+
+  &.primary {
+    background-color: #5f96c1;
+    &:hover {
+      background-color: #6aa3cf;
+    }
+    &:active {
+      background-color: #5083aa;
+    }
+  }
+  &.success {
+    background-color: #5fc179;
+    &:hover {
+      background-color: #64ca7f;
+    }
+    &:active {
+      background-color: #54ad72;
+    }
+  }
+  &.danger {
+    background-color: #c15f6d;
+    &:hover {
+      background-color: #d36e7d;
+    }
+    &:active {
+      background-color: #a34a58;
+    }
+  }
+}
