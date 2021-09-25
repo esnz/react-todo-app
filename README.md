@@ -2,6 +2,6 @@
 
 A simple Todo React app
 
-#### Tech Stack
+### Tech Stack
 
 **React, Redux, TypeScript**
