@@ -1,6 +1,6 @@
 # React Todo App
 
-A simple Todo React app
+Yet another todo app with React
 
 ### Tech Stack
 
