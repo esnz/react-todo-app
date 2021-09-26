@@ -38,7 +38,10 @@ const TodoItem = forwardRef<HTMLDivElement, ITodoItemProps>((props, ref) => {
       style={props.style}
       ref={ref}
     >
-      <p>{props.todo.title}</p>
+      <div className={styles.info}>
+        <p className={styles.title}>{props.todo.title}</p>
+        <p className={styles.description}>{props.todo.description}</p>
+      </div>
       <div className={styles.actions}>
         <button
           className={[styles.actionButton, styles.edit].join(' ')}

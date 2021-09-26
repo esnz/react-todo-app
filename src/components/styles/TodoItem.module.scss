@@ -21,8 +21,19 @@
     border-color: #9ee4a4;
   }
 
-  p {
+  .info {
     flex: 1;
+
+    .title {
+      font-size: 1.125rem;
+      color: rgba(0, 0, 0, 0.7);
+      font-weight: 500;
+    }
+    .description {
+      margin-top: 0.5rem;
+      font-size: 0.75rem;
+      color: #333;
+    }
   }
 }
 

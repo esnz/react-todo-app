@@ -11,25 +11,26 @@
   align-items: flex-start;
 
   h4 {
-    margin-bottom: 2rem;
+    margin-bottom: 1.65rem;
     color: #5e6a74;
-    font-size: 1.25rem;
+    font-size: 1.45rem;
     font-weight: 500;
+  }
+  label {
+    color: #333;
   }
 }
 
 .textInput,
 select {
-  height: 2.5rem;
   background: #ffffff;
   border: 1px solid #96b7d9;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.03);
   border-radius: 4px;
   font-size: 1rem;
   color: #333;
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
   margin-right: 0.5rem;
-  width: 26rem;
   margin-bottom: 1rem;
   width: 100%;
 
