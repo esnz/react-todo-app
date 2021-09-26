@@ -24,7 +24,7 @@
 .textInput,
 select {
   background: #ffffff;
-  border: 1px solid #96b7d9;
+  border: 1px solid #afb6be;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.03);
   border-radius: 4px;
   font-size: 1rem;
@@ -41,6 +41,7 @@ select {
 
 .button {
   font-size: 1rem;
+  font-weight: 400;
   height: 2.5rem;
   color: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
@@ -50,10 +51,6 @@ select {
   border: none;
   transition: background-color 0.12s ease-in-out;
   margin-right: 0.6rem;
-
-  &.fullWidth {
-    width: 100%;
-  }
 
   &.primary {
     background-color: #5f96c1;
