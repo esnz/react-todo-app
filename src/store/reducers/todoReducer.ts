@@ -91,7 +91,7 @@ const todoSlice = createSlice({
       if (type === TodoStatus.Completed) state.completed = todos;
     },
 
-    crossBoardReorder: (
+    crossColumnReorder: (
       state: TodosState,
       {
         payload: { source, sourceStatus, destination, destinationStatus },
@@ -108,6 +108,6 @@ const todoSlice = createSlice({
   },
 });
 
-export const { addTodo, updateTodo, setEditingTodo, dismissEditingTodo, removeTodo, reorderTodos, crossBoardReorder } = todoSlice.actions;
+export const { addTodo, updateTodo, setEditingTodo, dismissEditingTodo, removeTodo, reorderTodos, crossColumnReorder } = todoSlice.actions;
 
 export default todoSlice.reducer;

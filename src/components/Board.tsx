@@ -1,6 +1,6 @@
 import { DragDropContext, DropResult } from 'react-beautiful-dnd';
 import { useDispatch, useSelector } from 'react-redux';
-import { crossBoardReorder, reorderTodos } from '../store/reducers/todoReducer';
+import { crossColumnReorder, reorderTodos } from '../store/reducers/todoReducer';
 import { RootStore } from '../store/store';
 import { Todo, TodoStatus } from '../types/Todo';
 import Column from './Column';
@@ -57,7 +57,7 @@ const Board: React.FC<IBoardProps> = (props) => {
       const result = move(sourceList.todos, destinationList.todos, source, destination);
 
       dispatch(
-        crossBoardReorder({
+        crossColumnReorder({
           source: result[0].map((t) => ({ ...t, status: sourceList.status })),
           sourceStatus: sourceList.status,
           destination: result[1].map((t) => ({ ...t, status: destinationList.status })),
