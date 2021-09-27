@@ -13,15 +13,3 @@ export const useClickOutside = (element: any, callback: Function) => {
     };
   });
 };
-
-export const useWindowResizeEvent = (callback: Function) => {
-  useEffect(() => {
-    const handleWindowResize = () => {
-      callback();
-    };
-    window.addEventListener('resize', handleWindowResize);
-    return () => {
-      window.removeEventListener('resize', handleWindowResize);
-    };
-  });
-};
