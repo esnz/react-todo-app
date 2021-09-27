@@ -101,7 +101,7 @@ const AddTodo: React.FC = () => {
         <button type="submit" onClick={() => setIsModalOpen(true)} className={[styles.button, styles.primary].join(' ')}>
           New Todo
         </button>
-        <p>
+        <p className={styles.summary}>
           {totalTasks} task{totalTasks > 1 ? 's' : ''} ({completed.length} completed)
         </p>
       </div>

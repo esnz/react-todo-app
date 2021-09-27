@@ -9,7 +9,7 @@ import styles from './styles/TodoItem.module.scss';
 
 interface ITodoItemProps {
   todo: Todo;
-  ref: any;
+  ref: HTMLDivElement;
   style: CSSProperties | undefined;
   dragHandleProps: DraggableProvidedDragHandleProps | undefined;
   draggableProps: DraggableProvidedDraggableProps;

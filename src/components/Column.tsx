@@ -11,7 +11,6 @@ interface IColumnProps {
 }
 
 const getItemStyle = (isDragging: boolean, draggableStyle: any) => ({
-  margin: `0 0 0.5rem 0`,
   ...draggableStyle,
 });
 

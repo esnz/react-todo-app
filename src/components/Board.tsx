@@ -1,4 +1,4 @@
-import { DragDropContext } from 'react-beautiful-dnd';
+import { DragDropContext, DropResult } from 'react-beautiful-dnd';
 import { useDispatch, useSelector } from 'react-redux';
 import { crossBoardReorder, reorderTodos } from '../store/reducers/todoReducer';
 import { RootStore } from '../store/store';
@@ -40,15 +40,16 @@ const Board: React.FC<IBoardProps> = (props) => {
     }
   };
 
-  const onDragEnd = (result: any) => {
+  const onDragEnd = (result: DropResult) => {
     const { source, destination } = result;
 
-    if (!result.destination) {
+    if (!destination) {
       return;
     }
+
     if (source.droppableId === destination.droppableId) {
       const { todos, status } = getList(source.droppableId);
-      const items = reorder(todos, result.source.index, result.destination.index);
+      const items = reorder(todos, result.source.index, destination.index);
       dispatch(reorderTodos({ todos: items, type: status }));
     } else {
       const sourceList = getList(source.droppableId);
