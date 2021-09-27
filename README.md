@@ -9,6 +9,6 @@ Yet another todo app with React
 ### Features
 
 - Kanban board for organizing todos
-- Drag & drop todos across the boards
+- Drag & drop todos across the board
 - Data persisted in LocalStorage
 - Responsive user interface
