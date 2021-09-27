@@ -8,7 +8,7 @@ Yet another todo app with React
 
 ### Features
 
-- Kanban board for organizing todos
+- Kanban board to organize todos in three columns (Todo, In Progress, Completed)
 - Drag & drop todos across the board
 - Data persisted in LocalStorage
 - Responsive user interface
