@@ -1,5 +1,5 @@
 .backdrop {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   left: 0;
   top: 0;
@@ -10,7 +10,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   animation: anim 0.2s ease-out;
 
   @keyframes anim {
