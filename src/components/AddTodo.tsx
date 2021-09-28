@@ -57,7 +57,15 @@ const AddTodo: React.FC = () => {
         <form className={styles.addTodoForm} onSubmit={(e) => handleAddTodo(e)}>
           <h4>{editingTodo ? 'Edit Todo' : 'Add New Todo'}</h4>
           <label htmlFor="title">Title</label>
-          <input name="title" className={styles.textInput} value={todoTitle} onChange={(e) => setTodoTitle(e.target.value)} type="text" required />
+          <input
+            name="title"
+            id="title"
+            className={styles.textInput}
+            value={todoTitle}
+            onChange={(e) => setTodoTitle(e.target.value)}
+            type="text"
+            required
+          />
 
           <label htmlFor="description">Description</label>
           <textarea
@@ -65,12 +73,14 @@ const AddTodo: React.FC = () => {
             onChange={(e) => setTodoDescription(e.target.value)}
             className={styles.textInput}
             name="description"
+            id="description"
             rows={3}
           ></textarea>
 
           <label htmlFor="status">Status</label>
           <select
             name="status"
+            id="status"
             value={todoStatus}
             onChange={(e) => {
               setTodoStatus(e.target.value as TodoStatus);
