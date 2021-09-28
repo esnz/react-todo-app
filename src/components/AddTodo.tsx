@@ -46,7 +46,7 @@ const AddTodo: React.FC = () => {
     setTodoTitle('');
     setTodoDescription('');
     setTodoStatus(TodoStatus.Todo);
-    setTimeout(() => dispatch(dismissEditingTodo()), 100);
+    setTimeout(() => dispatch(dismissEditingTodo()), 500);
   };
 
   const totalTasks = todo.length + inProgress.length + completed.length;
