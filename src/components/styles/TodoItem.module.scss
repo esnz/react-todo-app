@@ -1,3 +1,12 @@
+$TodoBgColor: #eff4fb;
+$TodoBorderColor: #9ec1e4;
+
+$InProgressBgColor: #fbefef;
+$InProgressBorderColor: #e49e9e;
+
+$CompletedBgColor: #effbf4;
+$CompletedBorderColor: #9ee4a4;
+
 .todoItem {
   display: flex;
   border-radius: 4px;
@@ -5,21 +14,31 @@
   font-size: 1rem;
   font-weight: 400;
   padding: 1rem;
-  border-left: 3px solid;
+  border: 1px solid transparent;
+  border-left-width: 3px;
   position: relative;
   margin-bottom: 0.5rem !important;
 
   &.todo {
-    background-color: #eff4fb;
-    border-color: #9ec1e4;
+    background-color: $TodoBgColor;
+    border-left-color: $TodoBorderColor;
+    &:hover {
+      border-color: $TodoBorderColor;
+    }
   }
   &.inProgress {
-    background-color: #fbefef;
-    border-color: #e49e9e;
+    background-color: $InProgressBgColor;
+    border-left-color: $InProgressBorderColor;
+    &:hover {
+      border-color: $InProgressBorderColor;
+    }
   }
   &.completed {
-    background-color: #effbf4;
-    border-color: #9ee4a4;
+    background-color: $CompletedBgColor;
+    border-left-color: $CompletedBorderColor;
+    &:hover {
+      border-color: $CompletedBorderColor;
+    }
   }
 
   .info {
