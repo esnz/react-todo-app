@@ -53,7 +53,7 @@ const AddTodo: React.FC = () => {
 
   return (
     <>
-      <Modal show={isModalOpen} closeHandler={() => cancelEditing()}>
+      <Modal visible={isModalOpen} closeHandler={() => cancelEditing()}>
         <form className={styles.addTodoForm} onSubmit={(e) => handleAddTodo(e)}>
           <h4>{editingTodo ? 'Edit Todo' : 'Add New Todo'}</h4>
           <label htmlFor="title">Title</label>

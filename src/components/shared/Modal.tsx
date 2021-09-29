@@ -3,14 +3,14 @@ import { ReactComponent as CloseIcon } from '../../assets/close.svg';
 import styles from '../styles/Modal.module.scss';
 
 interface IModalProps {
-  show: boolean;
+  visible: boolean;
   closeHandler: Function;
 }
 
 const Modal: React.FC<IModalProps> = (props) => {
   const [show, setShow] = useState(false);
 
-  useEffect(() => setShow(props.show), [props.show]);
+  useEffect(() => setShow(props.visible), [props.visible]);
 
   return (
     <div
@@ -19,6 +19,7 @@ const Modal: React.FC<IModalProps> = (props) => {
         props.closeHandler();
       }}
       style={{ display: show ? 'flex' : 'none' }}
+      role="dialog"
     >
       <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
         <a
