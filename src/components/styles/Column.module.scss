@@ -39,4 +39,8 @@
 
 .todoContainer {
   margin: 1rem;
+
+  & :last-child {
+    margin-bottom: 0;
+  }
 }
