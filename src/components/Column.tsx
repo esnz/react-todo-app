@@ -10,7 +10,7 @@ interface IColumnProps {
   type: 'todo' | 'inProgress' | 'completed';
 }
 
-const getItemStyle = (isDragging: boolean, draggableStyle: any) => ({
+const getItemStyle = (_isDragging: boolean, draggableStyle: any) => ({
   ...draggableStyle,
 });
 
@@ -20,7 +20,7 @@ const Column: React.FC<IColumnProps> = ({ todos, title, type }) => {
       <h6 className={[styles.title, styles[type]].join(' ')}>{title}</h6>
       <div className={styles.todoContainer}>
         <Droppable droppableId={type}>
-          {(provided, snapshot) => (
+          {(provided, _snapshot) => (
             <div {...provided.droppableProps} ref={provided.innerRef}>
               {todos.map((item, index) => (
                 <Draggable key={item.id} draggableId={item.id} index={index}>

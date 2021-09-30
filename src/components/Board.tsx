@@ -30,7 +30,7 @@ const Board: React.FC<IBoardProps> = (props) => {
   const dispatch = useDispatch();
   const { todo, inProgress, completed } = useSelector((store: RootStore) => store.todos);
 
-  const getList = (type: string): { todos: Todo[]; status: TodoStatus } => {
+  const getList = (type: string) => {
     if (type === 'todo') {
       return { todos: todo, status: TodoStatus.Todo };
     } else if (type === 'inProgress') {
@@ -54,13 +54,14 @@ const Board: React.FC<IBoardProps> = (props) => {
     } else {
       const sourceList = getList(source.droppableId);
       const destinationList = getList(destination.droppableId);
-      const result = move(sourceList.todos, destinationList.todos, source, destination);
+
+      const [updatedSource, updatedDestination] = move(sourceList.todos, destinationList.todos, source, destination);
 
       dispatch(
         crossColumnReorder({
-          source: result[0].map((t) => ({ ...t, status: sourceList.status })),
+          source: updatedSource.map((t) => ({ ...t, status: sourceList.status })),
           sourceStatus: sourceList.status,
-          destination: result[1].map((t) => ({ ...t, status: destinationList.status })),
+          destination: updatedDestination.map((t) => ({ ...t, status: destinationList.status })),
           destinationStatus: destinationList.status,
         })
       );
