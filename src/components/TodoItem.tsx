@@ -48,6 +48,7 @@ const TodoItem = forwardRef<HTMLDivElement, ITodoItemProps>((props, ref) => {
           onClick={() => {
             dispatch(setEditingTodo(props.todo));
           }}
+          aria-label="Edit"
         >
           <EditIcon />
         </button>
@@ -56,6 +57,7 @@ const TodoItem = forwardRef<HTMLDivElement, ITodoItemProps>((props, ref) => {
           onClick={() => {
             dispatch(removeTodo(props.todo));
           }}
+          aria-label="Remove"
         >
           <RemoveIcon />
         </button>

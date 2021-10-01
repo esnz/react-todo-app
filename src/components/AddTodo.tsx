@@ -41,7 +41,7 @@ const AddTodo: React.FC = () => {
     setTodoDescription('');
   };
 
-  const cancelEditing = () => {
+  const resetForm = () => {
     setIsModalOpen(false);
     setTodoTitle('');
     setTodoDescription('');
@@ -53,7 +53,7 @@ const AddTodo: React.FC = () => {
 
   return (
     <>
-      <Modal visible={isModalOpen} closeHandler={() => cancelEditing()}>
+      <Modal visible={isModalOpen} closeHandler={() => resetForm()}>
         <form className={styles.addTodoForm} onSubmit={(e) => handleAddTodo(e)}>
           <h4>{editingTodo ? 'Edit Todo' : 'Add New Todo'}</h4>
           <label htmlFor="title">Title</label>
@@ -96,7 +96,7 @@ const AddTodo: React.FC = () => {
             </button>
             <button
               onClick={() => {
-                cancelEditing();
+                resetForm();
               }}
               type="button"
               className={[styles.button, styles.danger].join(' ')}
